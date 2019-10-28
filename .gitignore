@@ -1,2 +1,5 @@
 .c9/
 db.sqlite3
+blog/__pycache__/settings.cpython-36.pyc
+posts/__pycache__/
+blog/__pycache__/settings.cpython-36.pyc
