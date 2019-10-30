@@ -36,13 +36,15 @@ def create_or_edit_post(request, pk=None):
     is null or not
     """
     post = get_object_or_404(Post, pk=pk) if pk else None
-    if request.method == "POST":
+    if request.method == "POST":  # User to POST a blog
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
-            post = form.save()
+            post = form.save()  # Full and valid blog is saved
             return redirect(post_detail, post.pk)
     else:
         form = BlogPostForm(instance=post)
+        # If blog not valid then user returns back to original list
+        # of blog posts
     return render(request, 'blogpostform.html', {'form': form})
     
 
