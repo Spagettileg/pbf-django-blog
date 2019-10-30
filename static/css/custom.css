@@ -123,6 +123,10 @@ a, a:hover {
     font-weight: bold;
 }
 
+.new-post li a {
+    color: #fff;
+}
+
 @media screen and (min-width: 768px) {
     #masthead h1 {
         font-size: 80px;
